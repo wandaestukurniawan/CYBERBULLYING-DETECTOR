@@ -2,6 +2,16 @@ import streamlit as st
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
+MODEL_STAGE1 = "wandaestu/stage1-cyberbullying"
+MODEL_STAGE2 = "wandaestu/stage2-cyberbullying"
+
+@st.cache_resource
+def load_models():
+    tok = AutoTokenizer.from_pretrained(MODEL_STAGE1)
+    model_s1 = AutoModelForSequenceClassification.from_pretrained(MODEL_STAGE1)
+    model_s2 = AutoModelForSequenceClassification.from_pretrained(MODEL_STAGE2)
+    return tok, model_s1, model_s2
+
 st.set_page_config(page_title="Cyberbullying Detection", layout="centered")
 
 st.title("🛡️ Cyberbullying Detection App")
