@@ -2,7 +2,7 @@
 
 A 2-stage deep learning web application built with Streamlit and PyTorch to detect and categorize cyberbullying text content in real-time.
 
-🔗 **Live Demo Application:** [[Insert Your Streamlit App Link Here](https://cyberbullying-alarm.streamlit.app/)]
+🔗 **Live Demo Application:** [[Streamlit App Link Here](https://cyberbullying-alarm.streamlit.app/)]
 
 ---
 
